@@ -427,15 +427,15 @@ $("document").ready(function () {
           $('input[name="question-option"]:checked')
         ) + 1;
       console.log(selectedRadioButtonIndex);
-      if (currentQuestion === 0 && selectedRadioButtonIndex === 3) {
+      if (currentQuestion === 0 && selectedRadioButtonIndex === 2) {
         currentQuestion = -1;
-        currentLanguage === "greek" ? skipToEnd("Μπορείτε να το εκδώσετε ξανά μόνο μια φορά μετά από απώλεια.") : skipToEnd("You can reissue it only one time after loss.");
+        currentLanguage === "greek" ? skipToEnd("Η ΕΚΑΑ χορηγείται μόνο σε άτομα που κατοικούν μόνιμα στην Ελλάδα και είναι ασφαλισμένα σε ελληνικό φορέα.") : skipToEnd("The EHIC is granted only to individuals who are permanent residents of Greece and are insured with a Greek social security institution.");
       } else if (currentQuestion === 1 && selectedRadioButtonIndex === 2) {
         currentQuestion = -1;
-        currentLanguage === "greek" ? skipToEnd("Πρέπει να είστε μόνιμος και νόμιμος κάτοικος της Ελλάδας.") : skipToEnd("You must be permanent and legal resident of Greece.");
+        currentLanguage === "greek" ? skipToEnd("Δεν μπορείτε να εκδώσετε την ΕΚΑΑ, καθώς απαιτείται να είστε ασφαλισμένος.") : skipToEnd("You cannot issue the EHIC because being insured is required.");
       } else if (currentQuestion === 3 && selectedRadioButtonIndex === 2) {
         currentQuestion = -1;
-        currentLanguage === "greek" ? skipToEnd("Πρέπει να έχετε ποσοστό αναπηρίας 67% και άνω ή να είστε δικαιούχος του επιδόματος ΟΠΕΚΑ.") : skipToEnd("You must have a disability rate of 67% or more or be a beneficiary of the OPEKA benefit.");
+        currentLanguage === "greek" ? skipToEnd("Δεν μπορείτε να εκδώσετε την ΕΚΑΑ χωρίς ενεργή ασφαλιστική ικανότητα.") : skipToEnd("You cannot issue the EHIC without active insurance coverage.");
       } else {
         //save selectedRadioButtonIndex to the storage
         userAnswers[currentQuestion] = selectedRadioButtonIndex;
